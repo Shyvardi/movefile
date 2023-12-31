@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # הגדרת התיקיה המקורית
-source_directory="${SOURCE_DIRECTORY}"
+source_directory="/home/shy/Hdd/FTP/data"
 
 # הגדרת התיקיה היעד
-destination_directory="${DESTINATION_DIRECTORY}"
+destination_directory="/home/shy/Hdd/MotionEye/Media"
 
 # שמות התיקיות משנה בתיקית המקור
 subdirectories=("Camera1" "Camera2" "Camera3" "Camera4")
@@ -26,7 +26,7 @@ inotifywait -m -e create --format "%f" -r "$source_directory" | while read -r fi
 
             # בדיקת פעילות בקובץ על ידי fuser
             while fuser "$source_directory/$subdir/$filename" &> /dev/null; do
-                echo "הקובץ ב-$source_directory/$subdir נמצא בשימוש, ממתין..."
+                echo "הקובץ ב-$source_directory/$subdir/$filename נמצא בשימוש, ממתין..."
                 sleep 1
             done
             
