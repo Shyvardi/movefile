@@ -3,8 +3,8 @@ FROM alpine:latest
 
 RUN apk --no-cache add bash
 RUN apk --no-cache add inotify-tools
-RUN apk --no-cache add psmisc
-RUN apk --no-cache add strace
+RUN apk --no-cache add lsof
+
 
 
 
