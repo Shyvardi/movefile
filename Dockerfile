@@ -7,6 +7,9 @@ WORKDIR /app
 # Download the script from GitHub
 # RUN wget https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh -O /app/script.sh
 
+# Debug: Print the working directory
+RUN pwd
+
 # Print the contents of /app for debugging
 RUN ls -la /app
 
