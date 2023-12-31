@@ -5,6 +5,8 @@ source_directory="${MYSOURCE_DIRECTORY}"
 
 # הגדרת התיקיה היעד
 destination_directory="${MYDESTINATION_DIRECTORY}"
+# הגדרת זמן המתנה
+sleeptime="${sleeptime}"
 
 # שמות התיקיות משנה בתיקית המקור
 subdirectories=("Camera1" "Camera2" "Camera3" "Camera4")
@@ -23,7 +25,7 @@ inotifywait -m -e create --format "%f" -r "$source_directory" | while read -r fi
                 mkdir -p "$full_destination_path"
                 echo "נוצרה תיקיה חדשה: $subdir/$destination_subdirectory_date"
             fi
-            sleep 2
+            sleep sleeptime
             # העברת הקובץ מהתיקיה המקורית לתיקיה היעד
             mv "$source_directory/$subdir/$filename" "$full_destination_path/"
             echo "הקובץ $filename הועבר בהצלחה לתיקיה: $subdir/$destination_subdirectory_date"
