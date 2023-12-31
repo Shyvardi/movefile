@@ -25,7 +25,7 @@ inotifywait -m -e create --format "%f" -r "$source_directory" | while read -r fi
             fi
 
             # בדיקת פעילות בקובץ על ידי fuser
-            while fuser "$source_directory/$subdir/$filename" &> /dev/null; do
+            while strace -e trace=open fuser "$source_directory/$subdir/$filename" &> /dev/null; do
                 echo "הקובץ ב-$source_directory/$subdir נמצא בשימוש, ממתין..."
                 sleep 1
             done
