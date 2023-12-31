@@ -25,7 +25,7 @@ inotifywait -m -e create --format "%f" -r "$source_directory" | while read -r fi
                 mkdir -p "$full_destination_path"
                 echo "נוצרה תיקיה חדשה: $subdir/$destination_subdirectory_date"
             fi
-            sleep $sleep_interval
+            # sleep $sleep_interval
             # העברת הקובץ מהתיקיה המקורית לתיקיה היעד
             mv "$source_directory/$subdir/$filename" "$full_destination_path/"
             echo "הקובץ $filename הועבר בהצלחה לתיקיה: $subdir/$destination_subdirectory_date"
