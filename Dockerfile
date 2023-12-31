@@ -1,5 +1,5 @@
 # Use the official Alpine base image
-FROM ubuntu:latest
+FROM alpine:latest
 
 RUN apk --no-cache add bash
 RUN apk --no-cache add inotify-tools
