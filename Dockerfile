@@ -5,7 +5,7 @@ FROM alpine:latest
 WORKDIR /app
 
 # Download the script from GitHub
-RUN wget https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh -O /app/script.sh
+# RUN wget https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh -O /app/script.sh
 
 # Print the contents of /app for debugging
 RUN ls -la /app
