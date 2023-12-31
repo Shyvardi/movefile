@@ -1,9 +1,11 @@
 # Use the official Alpine base image
 FROM alpine:latest
-
+RUN apk update
+RUN apk add psmisc \
+    && echo "Installed psmisc successfully"
 RUN apk --no-cache add bash
 RUN apk --no-cache add inotify-tools
-RUN apk --no-cache add psmisc
+
 
 # Create the directory /usr/src/app/
 RUN mkdir -p /usr/src/app/
