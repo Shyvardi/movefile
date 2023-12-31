@@ -3,11 +3,9 @@ FROM alpine:latest
 
 # Set the working directory inside the container
 WORKDIR /app
-# Download the script from GitHub
-ADD https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh /app/
 
-# Copy the script into the container at /app
-COPY script.sh /app/
+# Copy the script from GitHub
+COPY https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh /app/
 
 # Make the script executable
 RUN chmod +x /app/script.sh
