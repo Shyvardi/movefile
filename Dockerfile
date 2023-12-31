@@ -25,4 +25,4 @@ ADD https://raw.githubusercontent.com/Shyvardi/movefile/main/script.sh script.sh
 # Set permissions for the script.sh file
 RUN chmod +x script.sh
 
-CMD ["/bin/bash", "-c", "bash -x /usr/src/app/script.sh"]
+CMD ["/bin/bash", "-c", "/usr/src/app/script.sh"]
