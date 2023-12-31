@@ -1,10 +1,11 @@
 #!/bin/bash
 
 # הגדרת התיקיה המקורית
-source_directory="/home/shy/Hdd/FTP/data"
+source_directory="${MYSOURCE_DIRECTORY}"
 
 # הגדרת התיקיה היעד
-destination_directory="/home/shy/Hdd/MotionEye/Media"
+destination_directory="${MYDESTINATION_DIRECTORY}"
+
 
 # שמות התיקיות משנה בתיקית המקור
 subdirectories=("Camera1" "Camera2" "Camera3" "Camera4")
