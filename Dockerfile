@@ -1,5 +1,5 @@
 # Use the official Alpine base image
-FROM alpine:latest
+FROM ubuntu:latest
 
 # Create the directory /usr/src/app/
 RUN mkdir -p /usr/src/app/
