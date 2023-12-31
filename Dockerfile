@@ -11,7 +11,7 @@ WORKDIR /usr/src/app/
 ADD https://raw.githubusercontent.com/Shyvardi/movefile/main/script.sh script.sh
 
 RUN apk --no-cache add bash inotify-tools
-RUN apk update && apk add --no-cache lsof
+RUN apk --no-cache add bash lsof
 
 
 # Set permissions for the script.sh file
