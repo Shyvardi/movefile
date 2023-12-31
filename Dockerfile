@@ -1,14 +1,24 @@
-# Use a base image with a shell
+# Use the official Alpine base image
 FROM alpine:latest
 
-# Set the working directory inside the container
-WORKDIR /app
+# Create the directory /usr/src/app/
+RUN mkdir -p /usr/src/app/
 
-# Download the script from GitHub
-RUN wget https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh -O script.sh
+# Set the working directory
+WORKDIR /usr/src/app/
 
-# Make the script executable
+# Copy the script.sh file into the /usr/src/app/ directory
+COPY script.sh .
+
+RUN apk --no-cache add bash inotify-tools
+
+
+# Set permissions for the script.sh file
 RUN chmod +x script.sh
 
-# Define an entry point for the container
-ENTRYPOINT ["/app/script.sh"]
+
+
+
+RUN apk --no-cache add bash
+CMD ["/bin/bash", "-c", "/usr/src/app/script.sh"]
+
