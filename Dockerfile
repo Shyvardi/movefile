@@ -5,7 +5,7 @@ FROM alpine:latest
 WORKDIR /app
 
 # Copy the script from GitHub
-COPY wget https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh -O /app/script.sh
+RUN wget https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh -O /app/script.sh
 
 # Make the script executable
 RUN chmod +x /app/script.sh
