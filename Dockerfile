@@ -11,7 +11,7 @@ RUN wget https://raw.githubusercontent.com/Shyvardi/myscript/main/script.sh -O /
 RUN ls -la /app
 
 # Make the script executable
-RUN chmod +x /app/script.sh
+# RUN chmod +x /app/script.sh
 
 # Define an entry point for the container
-ENTRYPOINT ["/app/script.sh"]
+# ENTRYPOINT ["/app/script.sh"]
