@@ -7,8 +7,8 @@ RUN mkdir -p /usr/src/app/
 # Set the working directory
 WORKDIR /usr/src/app/
 
-# Copy the script.sh file into the /usr/src/app/ directory
-COPY script.sh .
+Download script.sh from GitHub
+ADD https://raw.githubusercontent.com/Shyvardi/movefile/main/script.sh script.sh
 
 RUN apk --no-cache add bash inotify-tools
 
