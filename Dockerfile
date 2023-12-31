@@ -10,8 +10,7 @@ WORKDIR /usr/src/app/
 # Download script.sh from GitHub using ADD
 ADD https://raw.githubusercontent.com/Shyvardi/movefile/main/script.sh script.sh
 
-RUN apk --no-cache add bash inotify-tools
-RUN apk --no-cache add bash lsof
+RUN apk --no-cache add bash inotify-tools lsof
 
 
 # Set permissions for the script.sh file
