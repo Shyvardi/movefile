@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  movefile:
+    container_name: movefile
+    build:
+      context: https://github.com/Shyvardi/movefile.git  # URL של גיטהב ל־Git repository
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - MYSOURCE_DIRECTORY=/to/Hdd/FTP/data
+      - MYDESTINATION_DIRECTORY=to/MotionEye/Media
+      
+ 
+    volumes:
+      - /to/FTP/data:/to/Hdd/FTP/data  # Mount the source directory
+      - /to/Hdd/MotionEye/Media:/to/Hdd/MotionEye/Media
+    privileged: true  # This is required for inotify to work
