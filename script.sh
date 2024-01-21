@@ -7,7 +7,7 @@ source_directory="${MYSOURCE_DIRECTORY}"
 destination_directory="${MYDESTINATION_DIRECTORY}"
 
 # שמות התיקיות משנה בתיקית המקור
-subdirectories=("Camera1" "Camera2" "Camera3" "Camera4")
+subdirectories=("Camera1" "Camera2" "Camera3" "Camera4" "Camera5")
 
 
 # הפעלת הסקריפט ברקע והמתנה לשינויים בתיקית המקור
